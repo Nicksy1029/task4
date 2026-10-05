@@ -1,0 +1,136 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-size: 12pt;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.app-layout {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+/* Шапка и подвал */
+.top-bar-header, .app-footer {
+  width: 100%;
+  background-color: rgb(69, 69, 220) !important;
+  box-sizing: border-box;
+  padding: 10px 20px !important;
+  height: auto !important;
+  line-height: normal !important;
+}
+
+.header-title {
+  color: #ffffff !important;
+  margin: 0 !important;
+  font-family: "Courier New", monospace !important;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.navig-btn {
+  display: block;
+  padding: 10px 15px;
+  background-color: #cbafaf;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.foot-text {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14pt;
+  margin: 0;
+  padding: 10px 0;
+  text-align: left;
+}
+
+/* Контейнеры и карточки */
+.main-content {
+  padding: 16px;
+}
+
+.content-container, .footer-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.sec-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-family: "Courier New", monospace !important;
+  margin-bottom: 16px !important;
+}
+
+/* Стили Таблицы из Задания 3 */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.centered-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.centered-table th,
+.centered-table td {
+  border: 1px solid black;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.centered-table tr:nth-child(odd) {
+  background-color: rgb(208, 109, 109);
+}
+
+.centered-table tbody tr:nth-child(even) {
+  background-color: #38ea97;
+}
+
+/* Стили Списка */
+.centred-list {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* Адаптивность Mobile First (min-width: 768px) */
+@media screen and (min-width: 768px) {
+  .content-container, .footer-container {
+    max-width: 960px;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .centred-list {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  .centered-table {
+    width: 65%;
+    margin: 20px auto;
+  }
+
+  .centered-form {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+}

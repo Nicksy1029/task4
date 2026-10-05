@@ -1,0 +1,87 @@
+/* =========================================================
+   1. БАЗОВЫЕ СТИЛИ (MOBILE FIRST - для смартфонов по дефолту)
+   ========================================================= */
+
+.site-header {
+  background-color: #4338ca !important;
+  padding: 15px 20px !important;
+  height: auto !important;
+  line-height: normal !important;
+  width: 100% !important;
+}
+
+/* Контейнер хедера на мобилке: всё центрируется в столбик */
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Навигация на мобилке: кнопки друг под другом ВО ВСЮ ШИРИНУ */
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.header-nav .ant-btn {
+  width: 100% !important;
+  height: 42px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #cbd5e1;
+  color: #1e293b;
+  border: none;
+}
+
+.header-nav .ant-btn:hover {
+  background-color: #94a3b8 !important;
+  color: #0f172a !important;
+}
+
+/* =========================================================
+   2. ДЕСКТОПНАЯ ВЕРСИЯ (min-width: 768px)
+   ========================================================= */
+
+@media screen and (min-width: 768px) {
+  /* На ПК разворачиваем в строку: лого слева, кнопки справа */
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-title {
+    font-size: 26px;
+  }
+
+  /* Кнопки встают в горизонтальный ряд */
+  .header-nav {
+    flex-direction: row;
+    width: auto;
+    gap: 12px;
+  }
+
+  /* Возвращаем кнопкам дефолтный компактный размер */
+  .header-nav .ant-btn {
+    width: auto !important;
+    height: 36px;
+    font-size: 14px;
+  }
+}
